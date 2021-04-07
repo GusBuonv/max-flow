@@ -1,0 +1,6 @@
+from typing import Any
+from typing_extensions import TypeGuard
+
+class Null: ...
+NULL: Null
+def is_null(val: Any) -> TypeGuard['Null']: ...
