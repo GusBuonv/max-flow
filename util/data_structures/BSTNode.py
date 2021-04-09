@@ -22,6 +22,10 @@ class BSTNode(BSTNodeI):
 	def parent(self: S) -> Nullable[S]:
 		return self._parent_ref() or NULL
 
+	@parent.setter
+	def parent(self, x) -> None:
+		self._parent_ref = ref(x)
+
 	@property
 	def left(self: S) -> Nullable[S]:
 		return self.children[LEFT]
